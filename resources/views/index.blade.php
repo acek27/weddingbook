@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Welcome to - Wedding Book</title>
+  <title>WeBook - Welcome</title>
 
   <!-- Bootstrap core CSS -->
   <link href="{{asset('dashboard/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -28,7 +28,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Wedding Book</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">WeBook</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -36,10 +36,10 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            <a class="nav-link js-scroll-trigger" href="#about">Tentang</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            <a class="nav-link js-scroll-trigger" href="#contact">Kontak</a>
           </li>
         </ul>
       </div>
@@ -52,7 +52,7 @@
       <div class="mx-auto text-center">
         <h1 class="mx-auto my-0 text-uppercase">Wedding Book</h1>
         <h2 class="text-white-50 mx-auto mt-2 mb-5">Buatlah buku tamu untuk pernikahan anda, lebih mudah dan praktis.</h2>
-        <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a>
+        <a href="{{url('/login')}}" class="btn btn-primary js-scroll-trigger">Mulai</a>
       </div>
     </div>
   </header>
@@ -62,7 +62,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2 class="text-white mb-4">Buku Tamu (Wedding Book)</h2>
+          <h2 class="text-white mb-4">Buku Tamu (WeBook)</h2>
           <p class="text-white-50">Buku tamu dirancang berbasis Web, di desain dengan sederhana agar pengguna bisa lebih mudah dalam menggunakan aplikasi ini.
               aplikasi ini dilengkapi dengan fitur-fitur yang membantu anda dalam penggunaan buku tamu.</p>
             <h5 class="text-white mb-4">Selamat Menempuh Hidup Baru</h5>
@@ -83,7 +83,7 @@
           <div class="card py-4 h-100">
             <div class="card-body text-center">
               <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Address</h4>
+              <h4 class="text-uppercase m-0">Alamat</h4>
               <hr class="my-4">
               <div class="small text-black-50">Wringin Anom, Kec. Asembagus Situbondo</div>
             </div>
@@ -107,7 +107,7 @@
           <div class="card py-4 h-100">
             <div class="card-body text-center">
               <i class="fas fa-mobile-alt text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Phone</h4>
+              <h4 class="text-uppercase m-0">Telepon</h4>
               <hr class="my-4">
               <div class="small text-black-50">08990531215</div>
             </div>
