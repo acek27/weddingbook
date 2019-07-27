@@ -26,9 +26,7 @@
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="{{asset('css/themes/all-themes.css')}}" rel="stylesheet"/>
-
-    <!-- JQuery DataTable Css -->
-    <link href="{{asset('plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css')}}" rel="stylesheet">
+    @yield('css')
 </head>
 
 <body class="theme-indigo">
@@ -106,6 +104,12 @@
                         <span>Tambah Data</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{route('dataTamu.index')}}">
+                        <i class="material-icons">book</i>
+                        <span>Data Tamu</span>
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- #Menu -->
@@ -159,23 +163,12 @@
 <!-- Custom Js -->
 <script src="{{asset('js/admin.js')}}"></script>
 <script src="{{asset('js/pages/index.js')}}"></script>
-<script src="{{asset('js/pages/tables/jquery-datatable.js')}}"></script>
 <script src="{{asset('plugins/bootstrap-select/js/bootstrap-select.js')}}"></script>
 
 
 <!-- Demo Js -->
 <script src="{{asset('js/demo.js')}}"></script>
 
-<!-- JQuery DataTable-->
-<script src="{{asset('plugins/jquery-datatable/jquery.dataTables.js')}}"></script>
-<script src="{{asset('plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js')}}"></script>
-<script src="{{asset('plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js')}}"></script>
-<script src="{{asset('plugins/jquery-datatable/extensions/export/buttons.flash.min.js')}}"></script>
-<script src="{{asset('plugins/jquery-datatable/extensions/export/jszip.min.js')}}"></script>
-<script src="{{asset('plugins/jquery-datatable/extensions/export/pdfmake.min.js')}}"></script>
-<script src="{{asset('plugins/jquery-datatable/extensions/export/vfs_fonts.js')}}"></script>
-<script src="{{asset('plugins/jquery-datatable/extensions/export/buttons.html5.min.js')}}"></script>
-<script src="{{asset('plugins/jquery-datatable/extensions/export/buttons.print.min.js')}}"></script>
 @yield('script')
 </body>
 

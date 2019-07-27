@@ -92,7 +92,7 @@
         <!-- Browser Usage -->
         <div class="col-sm-6">
             <div class="card">
-                <div class="body bg-warning">
+                <div class="body bg-danger">
                     <div class="font-bold m-b--35" style="text-align: center">KEMBALI</div>
                     <ul class="dashboard-stat-list">
                         <li>

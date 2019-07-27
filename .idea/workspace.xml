@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c08675d1-f552-48ba-a139-4ec091e2eb51" name="Default Changelist" comment="form data add">
+    <list default="true" id="c08675d1-f552-48ba-a139-4ec091e2eb51" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/user/dataTamu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/dataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/dataController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/homeUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/homeUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/dataTamu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/dataTamu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/keterangan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/keterangan.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/master/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/master/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/tambahData.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/tambahData.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -193,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564211351596</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="almost done">
+      <created>1564234759267</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1564234759267</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +217,7 @@
     <MESSAGE value="auth config" />
     <MESSAGE value="form data" />
     <MESSAGE value="form data add" />
-    <option name="LAST_COMMIT_MESSAGE" value="form data add" />
+    <MESSAGE value="almost done" />
+    <option name="LAST_COMMIT_MESSAGE" value="almost done" />
   </component>
 </project>
