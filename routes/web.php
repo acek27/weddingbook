@@ -21,6 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::middleware(['auth', 'can:user'])->group(function () {
     Route::prefix('user')->group(function () {
-
+        Route::resource('/dashboardUser', 'User\homeUserController');
+        Route::resource('/userData', 'User\dataController');
     });
 });
