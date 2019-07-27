@@ -17,7 +17,7 @@
                 </div>
                 <div class="content">
                     <div class="text">TOTAL TAMU</div>
-                    <div class="number count-to" data-from="0" data-to="257" data-speed="1000"
+                    <div class="number count-to" data-from="0" data-to="{{$data->count('id')}}" data-speed="1000"
                          data-fresh-interval="20"></div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                 </div>
                 <div class="content">
                     <div class="text">TOTAL UANG (RP)</div>
-                    <div class="number count-to" data-from="0" data-to="257" data-speed="1000"
+                    <div class="number count-to" data-from="0" data-to="{{$data->sum('uang')}}"
                          data-fresh-interval="20"></div>
                 </div>
             </div>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="content">
                     <div class="text">TOTAL BERAS (KG)</div>
-                    <div class="number count-to" data-from="0" data-to="243" data-speed="1000"
+                    <div class="number count-to" data-from="0" data-to="{{$data->sum('beras')}}" data-speed="1000"
                          data-fresh-interval="20"></div>
                 </div>
             </div>
@@ -53,11 +53,69 @@
                 </div>
                 <div class="content">
                     <div class="text">TOTAL GULA (KG)</div>
-                    <div class="number count-to" data-from="0" data-to="1225" data-speed="1000"
+                    <div class="number count-to" data-from="0" data-to="{{$data->sum('gula')}}" data-speed="1000"
                          data-fresh-interval="20"></div>
                 </div>
             </div>
         </div>
     </div>
     <!-- #END# Widgets -->
+
+    <div class="row clearfix">
+        <!-- Task Info -->
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="body bg-success">
+                    <div class="font-bold m-b--35" style="text-align: center">BARU</div>
+                    <ul class="dashboard-stat-list">
+                        <li>
+                            TAMU
+                            <span class="pull-right"><b style="font-size: 20px">{{$baru->count('id')}}</b> ORANG</span>
+                        </li>
+                        <li>
+                            UANG
+                            <span class="pull-right"><b style="font-size: 20px">{{number_format($baru->sum('uang'),0,',','.')}}</b> RUPIAH</span>
+                        </li>
+                        <li>
+                            BERAS
+                            <span class="pull-right"><b style="font-size: 20px">{{$baru->sum('beras')}}</b> KILOGRAM</span>
+                        </li>
+                        <li>
+                            GULA
+                            <span class="pull-right"><b style="font-size: 20px">{{$baru->sum('gula')}}</b> KILOGRAM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- #END# Task Info -->
+        <!-- Browser Usage -->
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="body bg-warning">
+                    <div class="font-bold m-b--35" style="text-align: center">KEMBALI</div>
+                    <ul class="dashboard-stat-list">
+                        <li>
+                            TAMU
+                            <span class="pull-right"><b style="font-size: 20px">{{$kembali->count('id')}}</b> ORANG</span>
+                        </li>
+                        <li>
+                            UANG
+                            <span class="pull-right"><b style="font-size: 20px">{{number_format($kembali->sum('uang'),0,',','.')}}</b> RUPIAH</span>
+                        </li>
+                        <li>
+                            BERAS
+                            <span class="pull-right"><b style="font-size: 20px">{{$kembali->sum('beras')}}</b> KILOGRAM</span>
+                        </li>
+                        <li>
+                            GULA
+                            <span class="pull-right"><b style="font-size: 20px">{{$kembali->sum('gula')}}</b> KILOGRAM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #END# Browser Usage -->
+    </div>
 @endsection

@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\User;
 
+use App\models\dataTamu;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+
 
 class dataController extends Controller
 {
@@ -14,7 +17,8 @@ class dataController extends Controller
      */
     public function index()
     {
-        return view('user.tambahData');
+        $data = dataTamu::all()->where('id_user',Auth::user()->id);
+        return view('user.tambahData',compact('total','data'));
     }
 
     /**
@@ -30,18 +34,37 @@ class dataController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'uang' => 'numeric|required',
+            'beras' => 'nullable|numeric',
+            'gula' => 'nullable|numeric'
+        ]);
+        $add = new dataTamu();
+        $add->nama_tamu = $request->get('nama');
+        $add->alamat = $request->get('alamat');
+        $add->uang = $request->get('uang');
+        $add->beras = $request->get('beras');
+        $add->gula = $request->get('gula');
+        $add->lain = $request->get('lain');
+        $add->id_ket = $request->get('keterangan');
+        $add->id_user = Auth::user()->id;
+        $add->save();
+        \Session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Berhasil menambah tamu : $request->nama"
+        ]);
+        return redirect('/user/userData');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -52,7 +75,7 @@ class dataController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -63,8 +86,8 @@ class dataController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -75,7 +98,7 @@ class dataController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

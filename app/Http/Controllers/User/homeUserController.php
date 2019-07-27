@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\User;
 
+use App\models\dataTamu;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class homeUserController extends Controller
 {
@@ -14,7 +16,10 @@ class homeUserController extends Controller
      */
     public function index()
     {
-        return view('user.dashboard');
+    $data = dataTamu::all()->where('id_user',Auth::user()->id);
+    $baru = dataTamu::where('id_ket',1)->where('id_user',Auth::user()->id)->get();
+    $kembali = dataTamu::where('id_ket',2)->where('id_user',Auth::user()->id)->get();
+        return view('user.dashboard', compact('data','total','baru','kembali'));
     }
 
     /**
