@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c08675d1-f552-48ba-a139-4ec091e2eb51" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/user/dataTamu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/master/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/master/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/tambahData.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/tambahData.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="c08675d1-f552-48ba-a139-4ec091e2eb51" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564234759267</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add menu">
+      <created>1564238381501</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1564238381501</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +218,7 @@
     <MESSAGE value="form data" />
     <MESSAGE value="form data add" />
     <MESSAGE value="almost done" />
-    <option name="LAST_COMMIT_MESSAGE" value="almost done" />
+    <MESSAGE value="add menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="add menu" />
   </component>
 </project>
