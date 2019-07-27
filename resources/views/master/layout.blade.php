@@ -143,7 +143,7 @@
         <!-- Menu -->
         <div class="menu">
             <ul class="list">
-                <li class="header">MAIN NAVIGATION</li>
+                <li class="header">MENU UTAMA</li>
                 <li class="active">
                     <a href="{{route('dashboardUser.index')}}">
                         <i class="material-icons">home</i>
