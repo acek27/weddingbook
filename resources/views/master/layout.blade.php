@@ -169,6 +169,6 @@
 <!-- Demo Js -->
 <script src="{{asset('js/demo.js')}}"></script>
 
-@yield('script')
+@stack('script')
 </body>
 

@@ -32,7 +32,7 @@
                                 <div class="form-line">
                                     <input style="text-transform: uppercase" type="text" name="nama"
                                            value="{{old('nama')}}" class="form-control date"
-                                           placeholder="Inputkan nama tamu" required>
+                                           placeholder="Inputkan nama tamu" required autofocus>
                                 </div>
                             </div>
                         </div>
