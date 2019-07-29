@@ -2,6 +2,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 @yield('title')
 <!-- Favicon-->
     <link rel="icon" href="{{asset('images/clipboard.png')}}" type="image/x-icon">
@@ -26,6 +27,7 @@
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="{{asset('css/themes/all-themes.css')}}" rel="stylesheet"/>
+    <link href="/plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
     @yield('css')
 </head>
 
@@ -162,13 +164,21 @@
 
 <!-- Custom Js -->
 <script src="{{asset('js/admin.js')}}"></script>
-<script src="{{asset('js/pages/index.js')}}"></script>
 <script src="{{asset('plugins/bootstrap-select/js/bootstrap-select.js')}}"></script>
+<script src="{{asset('plugins/sweet-alert2/sweetalert2.min.js')}}"></script>
 
 
 <!-- Demo Js -->
 <script src="{{asset('js/demo.js')}}"></script>
 
+
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>
 @stack('script')
 </body>
 

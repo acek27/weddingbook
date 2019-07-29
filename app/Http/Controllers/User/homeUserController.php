@@ -19,7 +19,7 @@ class homeUserController extends Controller
     $data = dataTamu::all()->where('id_user',Auth::user()->id);
     $baru = dataTamu::where('id_ket',1)->where('id_user',Auth::user()->id)->get();
     $kembali = dataTamu::where('id_ket',2)->where('id_user',Auth::user()->id)->get();
-        return view('user.dashboard', compact('data','total','baru','kembali'));
+        return view('user.dashboard', compact('data','baru','kembali'));
     }
 
     /**

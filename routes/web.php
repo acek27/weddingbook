@@ -24,5 +24,7 @@ Route::middleware(['auth', 'can:user'])->group(function () {
         Route::resource('/dashboardUser', 'User\homeUserController');
         Route::resource('/userData', 'User\dataController');
         Route::resource('/dataTamu', 'User\tamuController');
+        Route::get('/tamu/data','User\tamuController@dataTamu')
+            ->name('tamu.data');
     });
 });

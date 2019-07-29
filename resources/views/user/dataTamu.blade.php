@@ -1,6 +1,8 @@
 @extends('master.layout')
 @section('css')
-    <link href="{{asset('css/datatables/tools/css/dataTables.tableTools.css')}}" rel="stylesheet"/>
+    <link rel="stylesheet" href="/plugins/jquery-datatables-editable/datatables.css"/>
+    <!-- DataTables -->
+    <link href="/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
 @endsection
 @section('title')
     <title>WeBook | Data Tamu</title>
@@ -32,21 +34,9 @@
                                 <th style="width: 10%;text-align: center; vertical-align: middle">Gula</th>
                                 <th style="text-align: center; vertical-align: middle">Lain-lain</th>
                                 <th style="text-align: center; vertical-align: middle">Action</th>
-
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($data as $value)
-                                <tr>
-                                    <td>{{$value->id}}</td>
-                                    <td style="text-align: left;text-transform: capitalize">{{$value->nama_tamu}}</td>
-                                    <td style="text-align: left;text-transform: capitalize">{{$value->alamat}}</td>
-                                    <td>Rp. {{number_format($value->uang,0,',','.')}}</td>
-                                    <td>{{$value->beras}}</td>
-                                    <td>{{$value->gula}}</td>
-                                    <td style="text-align: left">{{$value->lain}}</td>
-                                </tr>
-                            @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -57,7 +47,55 @@
 @endsection
 
 @push('script')
-    <script src="{{asset('js/datatables/js/jquery.dataTables.js')}}"></script>
-    <script src="{{asset('js/datatables/tools/js/dataTables.tableTools.js')}}"></script>
+    <script src="/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
+    <script src="/plugins/datatables/dataTables.bootstrap.js"></script>
+    <script src="/js/jquery.datatables.init.js"></script>
+    <script>
+        $(document).ready(function () {
+            var dt = $('#data_tamu').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: '{{route('tamu.data')}}',
+                columns: [
+                    {data: 'id', name: 'id'},
+                    {data: 'nama_tamu', name: 'nama_tamu'},
+                    {data: 'alamat', name: 'alamat'},
+                    {data: 'Uang', name: 'Uang'},
+                    {data: 'beras', name: 'beras'},
+                    {data: 'gula', name: 'gula'},
+                    {data: 'lain', name: 'lain'},
+                    {data: 'action', name: 'action', orderable: false, searchable: false, align: 'center'},
+                ]
+            });
+            var del = function (id) {
+                swal({
+                    title: "Apakah anda yakin?",
+                    text: "Anda tidak dapat mengembalikan data yang sudah terhapus!",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Iya!",
+                    cancelButtonText: "Tidak!",
+                }).then(
+                    function (result) {
+                        $.ajax({
+                            url: "{{route('dataTamu.index')}}/"+id,
+                            method: "DELETE",
+                        }).done(function( msg ) {
+                            dt.ajax.reload();
+                            swal("Deleted!", "Data sudah terhapus.", "success");
+                        }).fail(function( textStatus ) {
+                            alert( "Request failed: " + textStatus );
+                        });
+                    }, function (dismiss) {
+                        // dismiss can be 'cancel', 'overlay', 'esc' or 'timer'
+                        swal("Cancelled", "Data batal dihapus", "error");
+                    });
+            };
+            $('body').on('click', '.hapus-data', function () {
+                del($(this).attr('data-id'));
+            });
 
+        });
+    </script>
 @endpush

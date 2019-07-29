@@ -18,7 +18,7 @@ class dataController extends Controller
     public function index()
     {
         $data = dataTamu::all()->where('id_user',Auth::user()->id);
-        return view('user.tambahData',compact('total','data'));
+        return view('user.tambahData',compact('data'));
     }
 
     /**
