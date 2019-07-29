@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c08675d1-f552-48ba-a139-4ec091e2eb51" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/wedding.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wedding.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/dataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/dataController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/homeUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/homeUserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/tamuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/tamuController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/master/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/master/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/dataTamu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/dataTamu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/tambahData.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/tambahData.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,6 +131,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Olshop" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">
@@ -175,7 +168,7 @@
       <workItem from="1564244460516" duration="674000" />
       <workItem from="1564276742660" duration="7087000" />
       <workItem from="1564322697182" duration="3263000" />
-      <workItem from="1564373349303" duration="7882000" />
+      <workItem from="1564373349303" duration="12910000" />
     </task>
     <task id="LOCAL-00001" summary="landing page">
       <created>1563888121037</created>
@@ -233,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564293982329</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="datatable">
+      <created>1564383814029</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1564383814029</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +262,7 @@
     <MESSAGE value="add menu" />
     <MESSAGE value="icon" />
     <MESSAGE value="fix error" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix error" />
+    <MESSAGE value="datatable" />
+    <option name="LAST_COMMIT_MESSAGE" value="datatable" />
   </component>
 </project>

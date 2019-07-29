@@ -21,9 +21,9 @@ class tamuController extends Controller
         return view('user.dataTamu');
     }
 
-    public function dataTamu()
+    public function dataTamu(Request $request)
     {
-        return DataTables::of(dataTamu::all()->where('id_user', Auth::user()->id))
+        return DataTables::of(dataTamu::where('id_user', Auth::user()->id)->where('id_ket',$request->id))
             ->addColumn('Uang', function ($data) {
                 return 'Rp. '.number_format($data->uang,0,',','.');
             })

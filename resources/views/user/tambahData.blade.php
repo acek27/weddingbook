@@ -104,7 +104,7 @@
                             <h2 class="card-inside-title" style="margin-top: 0px;margin-bottom: 0px">Keterangan</h2>
                             <div class="input-group">
                                         <span class="input-group-addon">
-                                            <i class="material-icons">sync</i>
+                                            <i class="material-icons">import_export</i>
                                         </span>
                                 <div class="form-line">
                                     <select name="keterangan" class="form-control show-tick">
