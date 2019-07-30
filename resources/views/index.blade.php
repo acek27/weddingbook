@@ -115,7 +115,7 @@
                         <i class="fas fa-mobile-alt text-primary mb-2"></i>
                         <h4 class="text-uppercase m-0">Telepon</h4>
                         <hr class="my-4">
-                        <div class="small text-black-50">08990531215</div>
+                        <div class="small text-black-50">(+62) 8990531215</div>
                     </div>
                 </div>
             </div>
