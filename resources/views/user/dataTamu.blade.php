@@ -22,15 +22,16 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 @php
-                    $pilihan = 1;
+                    $pilihan = 0;
                     if (Request::has('id')){
                         $pilihan = Request::get('id');
                     }
                 @endphp
                 <div class="header">
                     <h2>
-                        TABEL DATA TAMU - @if($pilihan == 1) <strong style="color: green"> BARU
-                        @elseif($pilihan == 2) <strong style="color: red"> KEMBALI
+                        TABEL DATA TAMU - @if($pilihan == 0)<strong> SEMUA</strong>
+                        @elseif($pilihan == 1) <strong style="color: green"> BARU</strong>
+                        @elseif($pilihan == 2) <strong style="color: red"> KEMBALI</strong>
                         @endif
                     </h2>
                 </div>
@@ -44,6 +45,7 @@
                                         </span>
                                 <div class="form-line">
                                     <select name="keterangan" class="form-control show-tick" id="list">
+                                        <option value="1" @if($pilihan == 0) selected @endif>semua</option>
                                         <option value="1" @if($pilihan == 1) selected @endif>Baru</option>
                                         <option value="2" @if($pilihan == 2) selected @endif>Kembali</option>
                                     </select>
