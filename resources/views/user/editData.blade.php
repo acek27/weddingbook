@@ -20,7 +20,7 @@
                     <h2>Form Tambah Data Baru</h2>
                 </div>
                 <div class="body">
-                    {!! Form::open(['url'=>route('userData.store'), 'method'=>'post']) !!}
+                    {!! Form::model($data,['url'=>route('userData.update',$data->id), 'method'=>'put']) !!}
                     {{ csrf_field() }}
                     <div class="row clearfix">
                         <div class="col-sm-12">
@@ -31,7 +31,7 @@
                                         </span>
                                 <div class="form-line">
                                     <input style="text-transform: uppercase" type="text" name="nama"
-                                           value="{{old('nama')}}" class="form-control date"
+                                           value="{{$data->nama_tamu}}" class="form-control date"
                                            placeholder="Inputkan nama tamu" required autofocus>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@
                                             <i class="material-icons">place</i>
                                         </span>
                                 <div class="form-line">
-                                    <input style="text-transform: capitalize" value="{{old('alamat')}}" type="text"
+                                    <input style="text-transform: capitalize" value="{{$data->alamat}}" type="text"
                                            name="alamat" class="form-control date"
                                            placeholder="Inputkan Alamat" required>
                                 </div>
@@ -60,7 +60,7 @@
                                             <i class="material-icons">monetization_on</i>
                                         </span>
                                 <div class="form-line">
-                                    <input type="text" name="uang" class="form-control date"
+                                    <input type="text" value="{{$data->uang}}" name="uang" class="form-control date"
                                            placeholder="Inputkan Uang">
                                 </div>
                                 @if ($errors->any())
@@ -75,7 +75,7 @@
                                             <i class="material-icons">spa</i>
                                         </span>
                                 <div class="form-line">
-                                    <input type="text" name="beras" class="form-control date"
+                                    <input type="text" value="{{$data->beras}}" name="beras" class="form-control date"
                                            placeholder="Inputkan Beras">
                                 </div>
                                 @if ($errors->any())
@@ -92,7 +92,7 @@
                                             <i class="material-icons">business_center</i>
                                         </span>
                                 <div class="form-line">
-                                    <input type="text" name="gula" class="form-control date"
+                                    <input type="text" value="{{$data->gula}}" name="gula" class="form-control date"
                                            placeholder="Inputkan Gula">
                                 </div>
                                 @if ($errors->any())
@@ -108,8 +108,13 @@
                                         </span>
                                 <div class="form-line">
                                     <select name="keterangan" class="form-control show-tick">
-                                        <option value="1">Baru</option>
-                                        <option value="2">Kembali</option>
+                                        @foreach($ket as $value)
+                                            <option value="{{$value->id_ket}}"
+                                                    @if($value->id_ket == $data->id_ket)
+                                                    selected="selected"
+                                                @endif
+                                            >{{$value->keterangan}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
@@ -118,8 +123,7 @@
                             <h2 class="card-inside-title">Lain-lain</h2>
                             <div class="form-group">
                                 <div class="form-line">
-                                    <textarea style="text-transform: capitalize;font-weight: bold" name="lain" rows="4" class="form-control no-resize"
-                                              placeholder="Inputkan selain uang, beras dan gula.. (contoh: telur 10kg)"></textarea>
+                                    <input type="text" style="font-weight: bold;text-transform: capitalize" name="lain" value="{{$data->lain}}" class="form-control no-resize">
                                 </div>
                             </div>
                             <button type="submit" class="btn bg-indigo waves-effect col-md-4">
@@ -133,41 +137,5 @@
             </div>
         </div>
         <!-- #END# Task Info -->
-        <!-- Browser Usage -->
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-            <div class="card">
-                <div class="header">
-                    <h2>RINCIAN DATA</h2>
-                </div>
-                <div class="body table-responsive">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th style="color: #0c5460">ITEM</th>
-                            <th style="color: #0c5460">KETERANGAN</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">Tamu</th>
-                            <td>{{$data->count('id')}} Orang</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Uang</th>
-                            <td>Rp. {{number_format($data->sum('uang'),0,',','.')}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Beras</th>
-                            <td>{{$data->sum('beras')}} Kg</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Gula</th>
-                            <td>{{$data->sum('gula')}} Kg</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
     </div>
 @endsection

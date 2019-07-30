@@ -92,7 +92,25 @@ class dataController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'uang' => 'numeric|required',
+            'beras' => 'nullable|numeric',
+            'gula' => 'nullable|numeric'
+        ]);
+        $update = dataTamu::findOrFail($id);
+        $update->nama_tamu = $request->get('nama');
+        $update->alamat = $request->get('alamat');
+        $update->uang = $request->get('uang');
+        $update->beras = $request->get('beras');
+        $update->gula = $request->get('gula');
+        $update->lain = $request->get('lain');
+        $update->id_ket = $request->get('keterangan');
+        $update->update();
+        \Session::flash("flash_notification", [
+            "level" => "success",
+            "message" => "Berhasil mengedit tamu : $request->nama"
+        ]);
+        return redirect('/user/dataTamu');
     }
 
     /**

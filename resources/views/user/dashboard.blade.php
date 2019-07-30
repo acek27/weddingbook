@@ -74,15 +74,18 @@
                         </li>
                         <li>
                             UANG
-                            <span class="pull-right"><b style="font-size: 20px">{{number_format($baru->sum('uang'),0,',','.')}}</b> RUPIAH</span>
+                            <span class="pull-right"><b
+                                    style="font-size: 20px">{{number_format($baru->sum('uang'),0,',','.')}}</b> RUPIAH</span>
                         </li>
                         <li>
                             BERAS
-                            <span class="pull-right"><b style="font-size: 20px">{{$baru->sum('beras')}}</b> KILOGRAM</span>
+                            <span class="pull-right"><b
+                                    style="font-size: 20px">{{$baru->sum('beras')}}</b> KILOGRAM</span>
                         </li>
                         <li>
                             GULA
-                            <span class="pull-right"><b style="font-size: 20px">{{$baru->sum('gula')}}</b> KILOGRAM</span>
+                            <span class="pull-right"><b
+                                    style="font-size: 20px">{{$baru->sum('gula')}}</b> KILOGRAM</span>
                         </li>
                     </ul>
                 </div>
@@ -97,11 +100,13 @@
                     <ul class="dashboard-stat-list">
                         <li>
                             TAMU
-                            <span class="pull-right"><b style="font-size: 20px">{{$kembali->count('id')}}</b> ORANG</span>
+                            <span class="pull-right"><b
+                                    style="font-size: 20px">{{$kembali->count('id')}}</b> ORANG</span>
                         </li>
                         <li>
                             UANG
-                            <span class="pull-right"><b style="font-size: 20px">{{number_format($kembali->sum('uang'),0,',','.')}}</b> RUPIAH</span>
+                            <span class="pull-right"><b
+                                    style="font-size: 20px">{{number_format($kembali->sum('uang'),0,',','.')}}</b> RUPIAH</span>
                         </li>
                         <li>
                             BERAS
@@ -109,7 +114,8 @@
                         </li>
                         <li>
                             GULA
-                            <span class="pull-right"><b style="font-size: 20px">{{$kembali->sum('gula')}}</b> KILOGRAM</span>
+                            <span class="pull-right"><b
+                                    style="font-size: 20px">{{$kembali->sum('gula')}}</b> KILOGRAM</span>
                         </li>
                     </ul>
                 </div>
@@ -119,3 +125,7 @@
     <!-- #END# Browser Usage -->
     </div>
 @endsection
+
+@push('script')
+    <script src="{{asset('js/pages/index.js')}}"></script>
+@endpush

@@ -167,7 +167,6 @@
 <script src="{{asset('plugins/bootstrap-select/js/bootstrap-select.js')}}"></script>
 <script src="{{asset('plugins/sweet-alert2/sweetalert2.min.js')}}"></script>
 
-
 <!-- Demo Js -->
 <script src="{{asset('js/demo.js')}}"></script>
 

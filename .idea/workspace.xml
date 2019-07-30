@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c08675d1-f552-48ba-a139-4ec091e2eb51" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/user/editData.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/dataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/dataController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/tamuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/tamuController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/master/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/master/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/dataTamu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/dataTamu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/tambahData.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/tambahData.blade.php" afterDir="false" />
     </list>
@@ -168,7 +172,8 @@
       <workItem from="1564244460516" duration="674000" />
       <workItem from="1564276742660" duration="7087000" />
       <workItem from="1564322697182" duration="3263000" />
-      <workItem from="1564373349303" duration="12910000" />
+      <workItem from="1564373349303" duration="13718000" />
+      <workItem from="1564448886358" duration="5882000" />
     </task>
     <task id="LOCAL-00001" summary="landing page">
       <created>1563888121037</created>
@@ -233,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564383814029</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="datatable sorting">
+      <created>1564389001760</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1564389001760</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +275,7 @@
     <MESSAGE value="icon" />
     <MESSAGE value="fix error" />
     <MESSAGE value="datatable" />
-    <option name="LAST_COMMIT_MESSAGE" value="datatable" />
+    <MESSAGE value="datatable sorting" />
+    <option name="LAST_COMMIT_MESSAGE" value="datatable sorting" />
   </component>
 </project>

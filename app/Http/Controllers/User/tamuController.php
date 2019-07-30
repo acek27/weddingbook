@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\models\dataTamu;
+use App\models\keterangan;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -29,8 +30,8 @@ class tamuController extends Controller
             })
             ->addColumn('action', function ($data) {
                 $del = '<a href="#" data-id="' . $data->id . '" class="hapus-data"><i class="material-icons">delete_forever</i></a>';
-//                $edit = '<a href="' . route($this->route . '.edit', [$this->route => $data->id]) . '" class="btn btn-primary"><i class="fa fa-pencil"></i></a>';
-                return $del;
+                $edit = '<a href="' . route('dataTamu.edit',$data->id). '"><i class="material-icons">edit</i></a>';
+                return $edit.'&nbsp'.$del;
             })
             ->make(true);
     }
@@ -81,7 +82,9 @@ class tamuController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = dataTamu::findOrFail($id);
+        $ket =keterangan::all();
+        return view('user.editData', compact('data','ket'));
     }
 
     /**

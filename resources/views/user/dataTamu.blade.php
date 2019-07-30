@@ -1,8 +1,8 @@
 @extends('master.layout')
 @section('css')
-    <link rel="stylesheet" href="/plugins/jquery-datatables-editable/datatables.css"/>
+    <link rel="stylesheet" href="{{asset('plugins/jquery-datatables-editable/datatables.css')}}"/>
     <!-- DataTables -->
-    <link href="/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('plugins/datatables/jquery.dataTables.min.css')}}" rel="stylesheet" type="text/css"/>
 @endsection
 @section('title')
     <title>WeBook | Data Tamu</title>
@@ -12,25 +12,32 @@
     DATA TAMU
 @endsection
 @section('content')
+    @if (session()->has('flash_notification.message'))
+        <div class="alert alert-{{ session()->get('flash_notification.level') }}">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {!! session()->get('flash_notification.message') !!}
+        </div>
+    @endif
     <div class="row clearfix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card">
-                <div class="header">
-                    <h2>
-                        TABEL DATA TAMU
-                    </h2>
-                </div>
                 @php
                     $pilihan = 1;
                     if (Request::has('id')){
                         $pilihan = Request::get('id');
                     }
                 @endphp
-
+                <div class="header">
+                    <h2>
+                        TABEL DATA TAMU - @if($pilihan == 1) <strong style="color: green"> BARU
+                        @elseif($pilihan == 2) <strong style="color: red"> KEMBALI
+                        @endif
+                    </h2>
+                </div>
                 <div class="row clearfix">
                     <div class="body">
                         <div class="col-md-4" style="margin-bottom: 0px">
-                            <h2 class="card-inside-title" style="margin-top: 0px;margin-bottom: 0px">Urut berdasarkan :</h2>
+                            <h2 class="card-inside-title" style="margin-top: 0px;margin-bottom: 0px">Tampilkan berdasarkan :</h2>
                             <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="material-icons">import_export</i>
@@ -72,9 +79,9 @@
 @endsection
 
 @push('script')
-    <script src="/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
-    <script src="/plugins/datatables/dataTables.bootstrap.js"></script>
-    <script src="/js/jquery.datatables.init.js"></script>
+    <script src="{{asset('plugins/jquery-datatables-editable/jquery.dataTables.js')}}"></script>
+    <script src="{{asset('plugins/datatables/dataTables.bootstrap.js')}}"></script>
+    <script src="{{asset('js/jquery.datatables.init.js')}}"></script>
     <script>
         $(document).ready(function () {
             var dt = $('#data_tamu').DataTable({
