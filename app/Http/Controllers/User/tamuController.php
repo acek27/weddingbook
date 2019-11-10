@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Yajra\DataTables\DataTables;
-
+use Barryvdh\DomPDF\Facade as PDF;
 
 class tamuController extends Controller
 {
@@ -64,6 +64,29 @@ class tamuController extends Controller
     {
         //
     }
+
+    public function generatePDF($id)
+    {
+        if ($id == 1) {
+            $data = dataTamu::where('id_ket', $id)
+                ->where('id_user', Auth::user()->id)
+                ->get();
+            $pdf = PDF::loadView('myPDF', compact('data'));
+            return $pdf->stream('Buku Tamu Undangan' . date('Y'));
+        } elseif ($id == 2) {
+            $data = dataTamu::where('id_ket', $id)
+                ->where('id_user', Auth::user()->id)
+                ->get();
+            $pdf = PDF::loadView('myPDF', compact('data'));
+            return $pdf->stream('Buku Tamu Undangan' . date('Y'));
+        } elseif ($id == 3) {
+            $data = dataTamu::where('id_user', Auth::user()->id)
+                ->get();
+            $pdf = PDF::loadView('myPDF', compact('data'));
+            return $pdf->stream('Buku Tamu Undangan' . date('Y'));
+        }
+    }
+
 
     /**
      * Store a newly created resource in storage.

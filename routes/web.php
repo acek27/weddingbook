@@ -26,5 +26,6 @@ Route::middleware(['auth', 'can:user'])->group(function () {
         Route::resource('/dataTamu', 'User\tamuController');
         Route::get('/tamu/data','User\tamuController@dataTamu')
             ->name('tamu.data');
+        Route::get('/generatePDF/{id}','User\tamuController@generatePDF')->name('generate.pdf');
     });
 });

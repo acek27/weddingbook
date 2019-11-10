@@ -53,6 +53,17 @@
                             </div>
                         </div>
                     </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary waves-effect dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <i class="material-icons">print</i>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{route('generate.pdf',3)}}" target="_blank" class=" waves-effect waves-block">Semua buku tamu</a></li>
+                            <li><a href="{{route('generate.pdf',1)}}" target="_blank" class=" waves-effect waves-block">Buku tamu baru</a></li>
+                            <li><a href="{{route('generate.pdf',2)}}" target="_blank" class=" waves-effect waves-block">Buku tamu kembali</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="body">
                     <div class="table-responsive">
