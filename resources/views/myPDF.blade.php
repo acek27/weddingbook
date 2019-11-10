@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>
-        Daftar Buku Tamu Tahun {{(int)date('Y')}}
+        Buku Tamu Pernikahan Tahun {{(int)date('Y')}}
     </title>
 </head>
 <body>
@@ -23,17 +23,16 @@
     }
 </style>
 <h5 style="text-align: center; margin-top: 5px; margin-bottom: 5px;">
-    Daftar Buku Tamu Tahun {{(int)date('Y')}}
+    Buku Tamu Pernikahan Tahun {{(int)date('Y')}}
 </h5>
 <br>
 @php date_default_timezone_set('Asia/Jakarta') @endphp
 <pre>
-Nama Pemilik Buku   : {{Auth::User()->name}}
-Tanggal Dicetak     : {{date('l, j-F-Y')}}
-Waktu Dicetak       : {{date('H:i:s a')}}
+Nama Pemilik Buku   : {{Auth::User()->name}}            {{date('l, j-F-Y')}}
 Tamu Keseluruhan    : {{$data->count('id')}} Orang
 Jumlah Tamu Baru    : {{$data->where('id_ket',1)->count('id')}} Orang
 Jumlah Tamu Kembali : {{$data->where('id_ket',2)->count('id')}} Orang
+Dikembalikan        : {{$data->where('id_ket',3)->count('id')}}
 Total Uang          : Rp {{number_format($data->sum('uang'), 0, ',', '.')}}
 Total Beras         : {{$data->sum('beras')}} Kg
 Total Gula          : {{$data->sum('gula')}} Kg
@@ -66,6 +65,8 @@ Total Gula          : {{$data->sum('gula')}} Kg
                 <td style="color: #2a9055;text-align: center">{{$p->keterangan->keterangan}}</td>
             @elseif($p->id_ket == 2)
                 <td style="color: #8a1f11;text-align: center">{{$p->keterangan->keterangan}}</td>
+            @elseif($p->id_ket == 3)
+                <td style="color: grey;text-align: center">{{$p->keterangan->keterangan}}</td>
             @endif
         </tr>
     @endforeach
@@ -75,7 +76,7 @@ Total Gula          : {{$data->sum('gula')}} Kg
 <footer class="footer">
     <div class="container">
         <div class="text-center" id="copyright">
-            &copy; {{(int)date('Y')}}, Razak Syaiful Rochman.
+            &copy; WeBook {{(int)date('Y')}}, <a href="http://www.acek.me">Razak Syaiful Rochman.</a>
         </div>
     </div>
 </footer>
