@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c08675d1-f552-48ba-a139-4ec091e2eb51" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/tamuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/tamuController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/myPDF.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/myPDF.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/dataTamu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/dataTamu.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -183,7 +180,10 @@
       <workItem from="1570148322405" duration="22000" />
       <workItem from="1573342509001" duration="11594000" />
       <workItem from="1573374195012" duration="1798000" />
-      <workItem from="1573385379336" duration="8098000" />
+      <workItem from="1573385379336" duration="8807000" />
+      <workItem from="1573433123485" duration="494000" />
+      <workItem from="1573633318374" duration="599000" />
+      <workItem from="1573649861680" duration="114000" />
     </task>
     <task id="LOCAL-00001" summary="landing page">
       <created>1563888121037</created>
@@ -283,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573356208779</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add fitur pengembalian">
+      <created>1573393585743</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1573393585743</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +325,7 @@
     <MESSAGE value="edit HP" />
     <MESSAGE value="datatable list" />
     <MESSAGE value="add export PDF" />
-    <option name="LAST_COMMIT_MESSAGE" value="add export PDF" />
+    <MESSAGE value="add fitur pengembalian" />
+    <option name="LAST_COMMIT_MESSAGE" value="add fitur pengembalian" />
   </component>
 </project>

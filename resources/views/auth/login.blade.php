@@ -33,7 +33,7 @@
         <div class="body">
             <form method="POST" action="{{ route('login') }}">
                 @csrf
-                <div class="msg">Sign in untu memulai aplikasi</div>
+                <div class="msg">Sign in untuk memulai aplikasi</div>
                 <div class="input-group">
                         <span class="input-group-addon">
                             <i class="material-icons">person</i>

@@ -11,7 +11,13 @@
 <style type="text/css">
     table tr td,
     table tr th {
-        font-size: 9pt;
+        font-size: 12pt;
+        border: 1px solid black;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
     }
 
     table tr th {
@@ -20,7 +26,15 @@
 
     td {
         text-transform: capitalize;
+        text-align: center;
+        height: 0px !important;
     }
+
+    .hang {
+        text-indent: -2em;
+        margin-left: 4em;
+    }
+
 </style>
 <h5 style="text-align: center; margin-top: 5px; margin-bottom: 5px;">
     Buku Tamu Pernikahan Tahun {{(int)date('Y')}}
@@ -37,7 +51,7 @@ Total Uang          : Rp {{number_format($data->sum('uang'), 0, ',', '.')}}
 Total Beras         : {{$data->sum('beras')}} Kg
 Total Gula          : {{$data->sum('gula')}} Kg
 </pre>
-<table class='table table-bordered'>
+<table class=''>
     <thead>
     <tr>
         <th>No</th>
@@ -53,7 +67,7 @@ Total Gula          : {{$data->sum('gula')}} Kg
     <tbody>
     @php $i=1 @endphp
     @foreach($data as $p)
-        <tr style="height: 0">
+        <tr>
             <td>{{ $i++ }}</td>
             <td>{{$p->nama_tamu}}</td>
             <td>{{$p->alamat}}</td>
